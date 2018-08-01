@@ -2,162 +2,162 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-    crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
 
-  <style type="text/css">
-    table.dataTable {
-      /* Fix misalignment header */
-      margin: unset;
-    }
-  </style>
+    <style type="text/css">
+        table.dataTable {
+            /* Fix misalignment header */
+            margin: unset;
+        }
+    </style>
 
-  <title>Test Ajax App</title>
+    <title>Test Ajax App</title>
 </head>
 
 <body>
-  <h1>Test Ajax App</h1>
+    <h1>Test Ajax App</h1>
 
-  <form name="name_form" action="/test_ajax_app/ajax/" method="POST">
-    <!-- <form name="name_form" action="/test_ajax_app/" method="POST"> -->
-    {% csrf_token %}
-    <input type="text" id="id_input_text" name="name_input_text" value="999.99">
-    <input class="btn" type="submit">
-  </form>
+    <form name="name_form" action="/test_ajax_app/ajax/" method="POST">
+        <!-- <form name="name_form" action="/test_ajax_app/" method="POST"> -->
+        {% csrf_token %}
+        <input type="text" id="id_input_text" name="name_input_text" value="999.99">
+        <input class="btn" type="submit">
+    </form>
 
-  <table id="example" class="display" style="width:100%">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Position</th>
-        <th>Office</th>
-        <th>Extn.</th>
-        <th>Start date</th>
-        <th>Salary</th>
-      </tr>
-    </thead>
-    <tfoot>
-      <tr>
-        <th>Name</th>
-        <th>Position</th>
-        <th>Office</th>
-        <th>Extn.</th>
-        <th>Start date</th>
-        <th>Salary</th>
-      </tr>
-    </tfoot>
-  </table>
+    <table id="example" class="display" style="width:80%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 
-  <!--  datatables js -->
-  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
-  <!-- column visible -->
-  <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
-  <!-- save as csv-->
+    <!--  datatables js -->
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+    <!-- column visible -->
+    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <!-- save as csv-->
 
-  <!-- moment.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
 
-  <script>
-    // {% load static %}
-    $(document).ready(function () {
+    <script>
+        var table_example;
+        var config_table_example;
 
-      // [3]
-      function getCookie(name) {
-        var cookieValue = null;
-        if (document.cookie && document.cookie != '') {
-          var cookies = document.cookie.split(';');
-          for (var i = 0; i < cookies.length; i++) {
-            var cookie = jQuery.trim(cookies[i]);
-            // Does this cookie string begin with the name we want?
-            if (cookie.substring(0, name.length + 1) == (name + '=')) {
-              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-              break;
+        $(document).ready(function () {
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
             }
-          }
-        }
-        return cookieValue;
-      }
-      var csrftoken = getCookie('csrftoken');
 
-      function csrfSafeMethod(method) {
-        // these HTTP methods do not require CSRF protection
-        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-      }
-      $.ajaxSetup({
-        crossDomain: false, // obviates need for sameOrigin test
-        beforeSend: function (xhr, settings) {
-          if (!csrfSafeMethod(settings.type)) {
-            xhr.setRequestHeader("X-CSRFToken", csrftoken);
-          }
-        }
-      });
-      //
+            var csrftoken = getCookie('csrftoken');
 
-      $('#example').DataTable({
-        // [1]
-        // "ajax": '{% static "./ajax/data/arrays.txt" %}'
-        // // "ajax": './arrays.txt'
+            function csrfSafeMethod(method) {
+                // these HTTP methods do not require CSRF protection
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
 
-        // [2]
-        // "ajax": {
-        //   "url" : '{% static "./data.json"%}',
-        //   // "url" : "data.json",
-        //   "type" : "POST"
-        // }
+            $.ajaxSetup({
+                crossDomain: false, // obviates need for sameOrigin test
+                beforeSend: function (xhr, settings) {
+                    if (!csrfSafeMethod(settings.type)) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                }
+            });
 
-        // [3]
-        "serverSide" : true,
-        "ajax" : {
-          url: '/test_ajax_app/ajax/',
-          type: 'POST',
-        }
+            table_example = $('#example').DataTable({
+                "serverSide": true,
+                "ajax": {
+                    url: '/test_ajax_app/ajax2/',
+                    type: 'POST',
+                }
+            });
+        });
 
-      });
-    });
+        $("form").submit(function (event) {
+            event.preventDefault();
 
-    $("form").submit(function (event) {
-      event.preventDefault();
+            var form = $(this);
 
-      var form = $(this);
+            $.ajax({
+                url: form.prop("action"),
+                method: form.prop("method"),
+                data: form.serialize(),
+                timeout: 10000,
+                dataType: "text",
+            })
+                .done(function (data) {
+                    alert("done");
+                    // $("#id_div_ajax_response").text(data);
+                    localStorage.setItem("dataID", data);
 
-      $.ajax({
-        url: form.prop("action"),
-        method: form.prop("method"),
-        data: form.serialize(),
-        timeout: 10000,
-        dataType: "text",
-      })
-      .done(function (data) {
-        alert("done");
-        $("#id_div_ajax_response").text(data);
-      })
-      .fail(function (data) {
-        alert("fail");
-        $("#id_div_ajax_response").text(data);
-      })
-    });
+                    table_example.destroy();
+                    $("#example").DataTable({
+                        "ajax": function(data, callback, settings){
+                            callback(
+                                JSON.parse( localStorage.getItem("dataID") )
+                            );
+                        }
+                    });
 
-  </script>
+                    localStorage.clear();
+                })
+                .fail(function (data) {
+                    alert("fail");
+                    // $("#id_div_ajax_response").text(data);
+                })
+        });
+
+    </script>
 </body>
 
 </html>

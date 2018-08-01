@@ -13,7 +13,7 @@ def test_ajax_response(request):
         "data": [
             ["Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800"],
             ["Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750"],
-            ["Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12", "$86,000"],
+            ["Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12", "$86,000"]
         ]
     }
 
@@ -36,6 +36,19 @@ def test_ajax_response(request):
 
     return HttpResponse(data)
     # return HttpResponse(hoge)
+
+def test_ajax_response2(request):
+    data_dic = {
+        "data": [
+            ["1-1", "1-2", "1-3", "1-4", "1-5", "1-6"],
+            ["2-1", "2-2", "2-3", "2-4", "2-5", "2-6"]
+        ]
+    }
+
+    data = json.dumps(data_dic)
+
+    return HttpResponse(data)
+
 
 def test_ajax_app(request):
     hoge = "Hello Django!!"
